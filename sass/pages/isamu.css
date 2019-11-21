@@ -53,8 +53,8 @@ body{
 
 }
 .main1 img{
-    margin: 10%;
-    width: 40vh;
+    margin: 10px;
+    width: 50vh;
     background-color: gray;
 }
 .main1 img:hover{
