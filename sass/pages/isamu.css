@@ -48,13 +48,13 @@ body{
     display: flex;
     flex-wrap:wrap;
     justify-content: space-around;
-    width: 70%;
+    width:70%;
     
 
 }
 .main1 img{
     margin: 10%;
-    width:300px;
+    width: 40vh;
     background-color: gray;
 }
 .main1 img:hover{
