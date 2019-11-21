@@ -93,7 +93,7 @@ body {
   }
   
   .pointer1st { 
-    background-color: gold;
+    background-color:yellow;
     border: 2px solid gold;
   }
   .pointer1st.selected {
@@ -101,7 +101,7 @@ body {
   }
   
   .pointer2nd { 
-    background-color: khaki;
+    background-color:yellow;
     border: 2px solid khaki;
   }
   .pointer2nd.selected {
