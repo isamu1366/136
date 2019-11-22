@@ -95,6 +95,7 @@ body{
     display: flex;
     flex-direction: column;
     text-align:center;
+
 }
 .main2 li{
     text-align: left;
@@ -113,12 +114,15 @@ body{
     position: sticky;
     top:0px;
    
+
+   
 }
 .aside{
     margin-top:5% ;
     display: none;
     height: 40vh;
     width: 100%;
+
 
 }
 .aside img{
