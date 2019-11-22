@@ -1,0 +1,72 @@
+.container {
+  line-height: 1.75;
+}
+
+.tom {
+  width: 95wh;
+  margin: 2%;
+}
+
+.tom1 {
+  flex-direction: column;
+  width: auto;
+}
+
+.tom-h1 {
+  margin-left: 2%;
+//   margin-top: 10px;
+}
+
+// しまさんの沖縄そばおいしー😋
+
+.main1 .tom-img {
+  height: 20%;
+  width: 90%;
+  margin: auto;
+}
+
+.tom-h2 {
+  font-size: 25px;
+  margin: 10px;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+.to {
+  display: flex;
+  justify-content: space-around;
+
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.stripe {
+  width: auto;
+  padding: 10px;
+  background-size: 10px 10px;
+  background-color: #f8845d;
+  background-image: linear-gradient(
+    45deg,
+    #f8b55d 25%,
+    transparent 25%,
+    transparent 50%,
+    #f8b55d 50%,
+    #f8b55d 75%,
+    transparent 75%,
+    transparent
+  );
+}
+.stripe-inner {
+  background: #fff;
+  padding: 20px;
+}
+
+.tom1,.tom2,.tom3,.tom4,.tom5,.tom6 {
+    margin: 10px;  
+}
