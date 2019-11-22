@@ -47,6 +47,11 @@
     box-shadow: 5px 5px 1px gray;
 }
 
+.board-second p {
+    font-style: italic;
+    padding: 20px 0 20px 0;
+}
+
 .main2{
     width: 30%;
     border-left: solid 2px gray;
