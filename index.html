@@ -24,12 +24,12 @@
         <div class="section">
             <div class="main">
                 <div class="main1">
-                    <div class="article"><a href=""><img src="/assets/img/求人数.png" alt=""></a></div>
-                    <div class="article"><a href=""><img src="/assets/img/求人数.png" alt=""></a></div>
-                    <div class="article"><a href=""><img src="/assets/img/求人数.png" alt=""></a></div>
-                    <div class="article"><a href=""><img src="/assets/img/求人数.png" alt=""></a></div>
-                    <div class="article"><a href=""><img src="/assets/img/求人数.png" alt=""></a></div>
-                    <div class="article"><a href=""><img src="/assets/img/求人数.png" alt=""></a></div>
+                    <div class="article"><a href=""><img src="/assets/img/iOS の画像.jpg" alt=""></a></div>
+                    <div class="article"><a href=""><img src="/assets/img/iOS の画像 (1).jpg" alt=""></a></div>
+                    <div class="article"><a href=""><img src="/assets/img/iOS の画像 (2).jpg" alt=""></a></div>
+                    <div class="article"><a href=""><img src="/assets/img/iOS の画像 (3).jpg" alt=""></a></div>
+                    <div class="article"><a href=""><img src="/assets/img/iOS の画像 (4).jpg" alt=""></a></div>
+                    <div class="article"><a href=""><img src="/assets/img/iOS の画像 (5).jpg" alt=""></a></div>
                  </div>
                 <div class="main2">
                     <div class="archive">
@@ -56,7 +56,17 @@
             <div class="footerunder"><h1>Copyright isamu&tomoy&yoshiki.jp</h1></div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+    $(window).scroll(function(){
+    let position = $('.aside').offset().top;
+    let scroll = $(document).scrollTop() + (window.innerHeight/2); 
+       
+    if(scroll > position){
+      $('.aside').fadeIn(3000); 
+    };
+     })
+
     </script>
 </body>
 </html>
