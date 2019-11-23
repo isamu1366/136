@@ -1,0 +1,75 @@
+// 変数
+$base-color: black;
+
+// mixin
+@mixin board() {
+    color: red;
+    font-weight: bold;
+}
+
+// ネスト
+.board {
+    h1 {
+        text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: dotted 2px black;
+    margin-bottom: 30px;
+    }
+}
+
+// &
+
+// extend
+
+// パーシャル
+
+
+.board {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    margin: 30px 0 30px 0;
+}
+
+.board span {
+    @include board;
+}
+
+// .board h1 {
+    
+// }
+
+.board-second {
+    width: 80%;
+}
+
+.board-second h1 {
+    background-color: $base-color;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    box-shadow: 5px 5px 1px gray;
+}
+
+.board-second p {
+    font-style: italic;
+    padding: 20px 0 20px 0;
+}
+
+.mashimo-main{
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction:row;
+    border-bottom: solid 2px gray;
+}
+.mashimo-main1{
+    display: flex;
+    /* flex-wrap:wrap; */
+    /* justify-content: space-around; */
+    flex-direction: column;
+    align-items: center;
+    width:70%;
+}
