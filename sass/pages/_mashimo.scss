@@ -7,6 +7,16 @@ $base-color: black;
     font-weight: bold;
 }
 
+@mixin span {
+    color: red;
+    font-weight: bold;
+    text-decoration: dotted 2px red;
+}
+
+.mashimo-span {
+    @include span;
+}
+
 // ネスト
 .board {
     h1 {
@@ -14,15 +24,9 @@ $base-color: black;
     font-family: 'Times New Roman', Times, serif;
     border-bottom: dotted 2px black;
     margin-bottom: 30px;
+    animation: bounce 0.8s;
     }
 }
-
-// &
-
-// extend
-
-// パーシャル
-
 
 .board {
     width: 90%;
@@ -37,12 +41,9 @@ $base-color: black;
     @include board;
 }
 
-// .board h1 {
-    
-// }
-
 .board-second {
     width: 80%;
+    // border-bottom: solid 5px lightgray;
 }
 
 .board-second h1 {
@@ -54,6 +55,125 @@ $base-color: black;
 }
 
 .board-second p {
+    font-style: italic;
+    padding: 20px 0 20px 0;
+}
+
+.board-third {
+    width: 80%;
+    // margin-top: 50px;
+}
+
+.special-one h1 {
+    text-align: center;
+    animation: bounce 0.8s;
+    font-weight: bold;
+    font-family: 'Shadows Into Light', cursive;
+    font-style: italic;
+    font-size: 50px;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+
+    // &
+    &:hover {
+        color: #DA8E00;
+        background: -webkit-linear-gradient(-45deg, #F7DE05, #DA8E00, #EDAC06, #F7DE05, #ECB802, #DAAF08, #B67B03, #DA8E00, #EDAC06, #F7DE05, #ECB802, #EDAC06);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+/*!
+ * animate.css -https://daneden.github.io/animate.css/
+ * Version - 3.7.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2019 Daniel Eden
+ */
+
+ @-webkit-keyframes bounce {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    40%,
+    43% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -30px, 0);
+      transform: translate3d(0, -30px, 0);
+    }
+  
+    70% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -15px, 0);
+      transform: translate3d(0, -15px, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(0, -4px, 0);
+      transform: translate3d(0, -4px, 0);
+    }
+}
+  
+@keyframes bounce {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    40%,
+    43% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -30px, 0);
+      transform: translate3d(0, -30px, 0);
+    }
+  
+    70% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -15px, 0);
+      transform: translate3d(0, -15px, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(0, -4px, 0);
+      transform: translate3d(0, -4px, 0);
+    }
+}
+  
+// .bounce {
+//     -webkit-animation-name: bounce;
+//     animation-name: bounce;
+//     -webkit-transform-origin: center bottom;
+//     transform-origin: center bottom;
+// }
+
+.special-two {
+    @extend .trend-1;
+}
+
+.special-two h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.special-two p {
     font-style: italic;
     padding: 20px 0 20px 0;
 }
@@ -72,4 +192,20 @@ $base-color: black;
     flex-direction: column;
     align-items: center;
     width:70%;
+}
+
+// extend
+.trend-1 {
+    border-left: solid 1px lightgray;
+    border-right: solid 1px lightgray;
+    border-bottom: solid 1px lightgray;
+    margin-bottom: 30px;
+}
+
+.trend-2 {
+    @extend .trend-1;
+}
+
+.trend-3 {
+    @extend .trend-1;
 }
