@@ -52,4 +52,31 @@ aside{
     @include right;
 }
 
+.ti1{
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.ti2{
+    text-align: center;
+    // background-color: black;
+    margin-bottom:10vh ;
+}
+.ti3{
+  &:hover{
+      opacity: 0.3;
+  }
+}
 
+.ti4{
+    padding: 7% 0;
+    box-sizing: border-box;
+    width: 100%;
+    border: solid 2px black;
+    border-radius: 20%;
+    text-align: center;
+    align-items: center;
+    margin-top: 5%;
+}
