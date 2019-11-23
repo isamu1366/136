@@ -10,7 +10,6 @@ $base-color: black;
 @mixin span {
     color: red;
     font-weight: bold;
-    text-decoration: dotted 2px red;
 }
 
 .mashimo-span {
@@ -32,7 +31,6 @@ $base-color: black;
     width: 90%;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     flex-direction: column;
     margin: 30px 0 30px 0;
 }
@@ -43,7 +41,6 @@ $base-color: black;
 
 .board-second {
     width: 80%;
-    // border-bottom: solid 5px lightgray;
 }
 
 .board-second h1 {
@@ -61,7 +58,6 @@ $base-color: black;
 
 .board-third {
     width: 80%;
-    // margin-top: 50px;
 }
 
 .special-one h1 {
@@ -156,13 +152,6 @@ $base-color: black;
       transform: translate3d(0, -4px, 0);
     }
 }
-  
-// .bounce {
-//     -webkit-animation-name: bounce;
-//     animation-name: bounce;
-//     -webkit-transform-origin: center bottom;
-//     transform-origin: center bottom;
-// }
 
 .special-two {
     @extend .trend-1;
@@ -187,8 +176,6 @@ $base-color: black;
 }
 .mashimo-main1{
     display: flex;
-    /* flex-wrap:wrap; */
-    /* justify-content: space-around; */
     flex-direction: column;
     align-items: center;
     width:70%;
@@ -208,4 +195,68 @@ $base-color: black;
 
 .trend-3 {
     @extend .trend-1;
+}
+
+// price ここから
+.price {
+    @extend .mashimo-main1;
+    width: 100%;
+}
+
+.price-theme h1 {
+    background-color: $base-color;
+    color: white;
+    box-shadow: 5px 5px 1px gray;
+    margin-top: 60px;
+}
+
+.price-plan {
+    padding: 10px 0 10px 0;
+}
+
+.radio {
+    border: solid 2px black;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3% 3% 3% 3%;
+    margin-top: 20px;
+}
+
+.radio-input{
+    display: none;
+}
+.radio-input + label{
+    padding-left: 20px;
+    position:relative;
+    margin-right: 20px;
+}
+.radio-input + label::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #999;
+    border-radius: 50%;
+}
+.radio-input:checked + label{
+    color: #d01137;
+}
+.radio-input:checked + label::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 11px;
+    height: 11px;
+    background: #d01137;
+    border-radius: 50%;
+}
+
+.decide {
+    margin-top: 30px;
 }
