@@ -1,17 +1,18 @@
-.mashimo-main{
+/* .mashimo-main{
     height: 100%;
     width:100%;
     display: flex;
     flex-direction:row;
     border-bottom: solid 2px gray;
-}
-.mashimo-main1{
+} */
+
+/* .mashimo-main1{
     display: flex;
-    /* flex-wrap:wrap; */
-    /* justify-content: space-around; */
+    flex-wrap:wrap;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
     width:70%;
-}
+} */
 
 
