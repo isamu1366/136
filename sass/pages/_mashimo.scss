@@ -1,0 +1,284 @@
+// 変数
+$base-color: black;
+
+// mixin
+@mixin board() {
+    color: red;
+    font-weight: bold;
+}
+
+@mixin span {
+    font-weight: bold;
+    background:linear-gradient(transparent 80%, #ff0000 0%);
+}
+
+.mashimo-span {
+    @include span;
+}
+
+// ネスト
+.board {
+    h1 {
+        text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration-line: underline;
+    margin-bottom: 30px;
+    animation: bounce 0.8s;
+    }
+}
+
+.board {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px 0 30px 0;
+}
+
+.board span {
+    @include board;
+}
+
+.board-second {
+    width: 80%;
+}
+
+.board-second h1 {
+    background-color: $base-color;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    box-shadow: 5px 5px 1px gray;
+}
+
+.board-second p {
+    font-style: italic;
+    padding: 20px 0 20px 0;
+}
+
+.board-third {
+    width: 80%;
+}
+
+.special-one h1 {
+    text-align: center;
+    animation: bounce 0.8s;
+    font-weight: bold;
+    font-family: 'Shadows Into Light', cursive;
+    font-style: italic;
+    font-size: 50px;
+    border: solid 2px black;
+    border-top: solid 10px black;
+    margin-top: 60px;
+
+    // &
+    &:hover {
+        color: #DA8E00;
+        background: -webkit-linear-gradient(-45deg, #F7DE05, #DA8E00, #EDAC06, #F7DE05, #ECB802, #DAAF08, #B67B03, #DA8E00, #EDAC06, #F7DE05, #ECB802, #EDAC06);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.special-one a:visited {
+    color: black;
+}
+
+/*!
+ * animate.css -https://daneden.github.io/animate.css/
+ * Version - 3.7.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2019 Daniel Eden
+ */
+
+ @-webkit-keyframes bounce {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    40%,
+    43% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -30px, 0);
+      transform: translate3d(0, -30px, 0);
+    }
+  
+    70% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -15px, 0);
+      transform: translate3d(0, -15px, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(0, -4px, 0);
+      transform: translate3d(0, -4px, 0);
+    }
+}
+  
+@keyframes bounce {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    40%,
+    43% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -30px, 0);
+      transform: translate3d(0, -30px, 0);
+    }
+  
+    70% {
+      -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+      -webkit-transform: translate3d(0, -15px, 0);
+      transform: translate3d(0, -15px, 0);
+    }
+  
+    90% {
+      -webkit-transform: translate3d(0, -4px, 0);
+      transform: translate3d(0, -4px, 0);
+    }
+}
+
+.special-two {
+    @extend .trend-1;
+}
+
+.special-two h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.special-two p {
+    font-style: italic;
+    padding: 20px 0 20px 0;
+}
+
+.mashimo-main{
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction:row;
+    border-bottom: solid 2px gray;
+}
+.mashimo-main1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:70%;
+}
+
+// extend
+.trend-1 {
+    border-left: solid 1px lightgray;
+    border-right: solid 1px lightgray;
+    border-bottom: solid 1px lightgray;
+    margin-bottom: 30px;
+}
+
+.trend-2 {
+    @extend .trend-1;
+}
+
+.trend-3 {
+    @extend .trend-1;
+}
+
+// price ここから
+.price {
+    @extend .mashimo-main1;
+    width: 100%;
+}
+
+.price-theme h1 {
+    background-color: $base-color;
+    color: white;
+    box-shadow: 5px 5px 1px gray;
+    margin-top: 60px;
+}
+
+.price-plan {
+    padding: 10px 0 10px 0;
+}
+
+.radio {
+    border: solid 2px black;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3% 3% 3% 3%;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-input{
+    display: none;
+}
+.radio-input + label{
+    padding-left: 20px;
+    position:relative;
+    margin-right: 20px;
+}
+.radio-input + label::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #999;
+    border-radius: 50%;
+}
+.radio-input:checked + label{
+    color: #d01137;
+}
+.radio-input:checked + label::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 11px;
+    height: 11px;
+    background: #d01137;
+    border-radius: 50%;
+}
+
+.decide {
+    margin-top: 30px;
+}
+
+.mashimoft {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.scroll {
+    margin-right: 10px;
+}
+
+.scroll a:visited {
+    color: white;
+}

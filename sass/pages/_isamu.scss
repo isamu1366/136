@@ -1,0 +1,82 @@
+div{
+    h4{
+        font-size: 10px;
+    }
+}
+//ベースがくろの記事 
+$base-color:black;
+
+aside{
+    background-color: $base-color;
+}
+// 大きボタンと小っちゃいボタン
+.btn{
+    padding: 20px;
+    background-color:black;
+    color: white;
+}
+.btn-lg {
+    @extend.btn;
+    font-size: 20px;
+}
+.btn-sm{
+    @extend.btn;
+    font-size: 10px;
+}
+
+@mixin  midle(){
+    
+    align-items: center;
+    text-align: center;
+}
+
+.center{
+    @include midle;
+}
+@mixin  left(){
+    
+    
+    text-align:left;
+}
+
+.left{
+    @include left();
+}
+
+@mixin  right(){
+    
+    text-align: right;
+}
+
+.right{
+    @include right;
+}
+
+.ti1{
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.ti2{
+    text-align: center;
+    // background-color: black;
+    margin-bottom:10vh ;
+}
+.ti3{
+  &:hover{
+      opacity: 0.3;
+  }
+}
+
+.ti4{
+    padding: 7% 0;
+    box-sizing: border-box;
+    width: 100%;
+    border: solid 2px black;
+    border-radius: 20%;
+    text-align: center;
+    align-items: center;
+    margin-top: 5%;
+}
