@@ -8,8 +8,10 @@ $base-color: black;
 }
 
 @mixin span {
-    color: red;
+    // color: red;
     font-weight: bold;
+    background:linear-gradient(transparent 80%, #ff0000 0%);
+    // text-decoration-line: underline;
 }
 
 .mashimo-span {
@@ -221,6 +223,8 @@ $base-color: black;
     flex-direction: column;
     border-radius: 3% 3% 3% 3%;
     margin-top: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .radio-input{
@@ -259,4 +263,17 @@ $base-color: black;
 
 .decide {
     margin-top: 30px;
+}
+
+.mashimoft {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.scroll {
+    margin-right: 10px;
+}
+
+.scroll a:visited {
+    color: white;
 }
