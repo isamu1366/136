@@ -1,0 +1,160 @@
+// @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+$lightgray: #ced0da;
+$gray: #7e7b7b;
+$white: white;
+* {
+  box-sizing: border-box;
+}
+
+@mixin search {
+  position: absolute;
+  top: 82px;
+  left: 80%;
+  transform: translate(-60%, -60%);
+}
+
+@keyframes roll {
+  0% {
+    transform: translate(-60%, -60%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-80px, -60%) rotate(-10deg);
+  }
+  100% {
+    transform: translate(100px, -60%) rotate(360deg);
+  }
+}
+
+@keyframes roll-back {
+  0% {
+    transform: translate(100px, -60%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-60%, -60%) rotate(0deg);
+  }
+}
+
+@keyframes expand {
+  0% {
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    width: 80px;
+    height: 80px;
+  }
+  100% {
+    width: 400px;
+    height: 80px;
+    opacity: 1;
+  }
+}
+
+@keyframes collapse {
+  0% {
+    width: 400px;
+    height: 80px;
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    width: 80px;
+    height: 80px;
+  }
+  100% {
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+  }
+}
+
+.search-form {
+  @include search;
+  // margin-left: 5%;
+  width: 400px;
+  height: 80px;
+  text-align: center;
+  backface-visibility: hidden;
+  .search-input {
+    margin-top: 40px;
+    border: 0;
+    padding: 0 20px;
+    width: 0;
+    height: 0;
+    border-radius: 50px;
+    background-color: $lightgray;
+    font-size: 20px;
+    color: $white;
+    font-family: "Roboto", sans-serif;
+    .animate & {
+      animation: collapse 0.3s 0.4s both ease-in;
+    }
+    .focus & {
+      animation: expand 0.3s both ease-in;
+    }
+    &::-webkit-input-placeholder {
+      color: $white;
+    }
+    &:-moz-placeholder {
+      /* Firefox 18- */
+      color: $white;
+    }
+    &::-moz-placeholder {
+      /* Firefox 19+ */
+      color: $white;
+    }
+    &:-ms-input-placeholder {
+      color: $white;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .search-button {
+    @include search;
+    width: 60px;
+    height: 60px;
+    background-color: $gray;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    backface-visibility: hidden;
+    .animate & {
+      animation: roll-back 0.2s both ease-in;
+    }
+    .focus & {
+      animation: roll 0.4s 0.9s both ease-in;
+    }
+    &:focus {
+      outline: none;
+    }
+    span {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 4px solid $white;
+      display: block;
+      position: absolute;
+      top: 13px;
+      left: 14px;
+      &:after {
+        content: "";
+        width: 4px;
+        height: 15px;
+        background-color: $white;
+        position: absolute;
+        transform: rotate(-45deg);
+        top: 12px;
+        left: 18px;
+      }
+    }
+  }
+}
+
+// けんさくぼっくすのやつ_(:3 」∠)_
+.shadow {
+  display: none;
+}
