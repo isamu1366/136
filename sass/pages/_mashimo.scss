@@ -8,10 +8,8 @@ $base-color: black;
 }
 
 @mixin span {
-    // color: red;
     font-weight: bold;
     background:linear-gradient(transparent 80%, #ff0000 0%);
-    // text-decoration-line: underline;
 }
 
 .mashimo-span {
@@ -23,7 +21,7 @@ $base-color: black;
     h1 {
         text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    border-bottom: dotted 2px black;
+    text-decoration-line: underline;
     margin-bottom: 30px;
     animation: bounce 0.8s;
     }
@@ -166,6 +164,7 @@ $base-color: black;
 .special-two h1 {
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
+    font-weight: bold;
 }
 
 .special-two p {
