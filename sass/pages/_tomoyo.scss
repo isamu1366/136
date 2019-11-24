@@ -3,8 +3,7 @@
 }
 
 .tom {
-  width: 95wh;
-  margin: 2%;
+  width: 100wh;
 }
 
 .tom1 {
@@ -14,7 +13,7 @@
 
 .tom-h1 {
   margin-left: 2%;
-//   margin-top: 10px;
+  //   margin-top: 10px;
 }
 
 // しまさんの沖縄そばおいしー😋
@@ -34,18 +33,23 @@ strong {
   font-weight: bolder;
 }
 
+
+// 変数 
+$font-color: #5d627b;
+
 .to {
+  color: $font-color;
   display: flex;
   justify-content: space-around;
-
   padding: 0.5em 1em;
   margin: 2em 0;
-  color: #5d627b;
   background: white;
   border-top: solid 5px #5d627b;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+
 }
 
+// しましまボーダー線٩( ᐛ )و
 .stripe {
   width: auto;
   padding: 10px;
@@ -68,5 +72,112 @@ strong {
 }
 
 .tom1,.tom2,.tom3,.tom4,.tom5,.tom6 {
-    margin: 10px;  
+  margin: 10px;
+
+}
+
+.card {
+  width: 40%;
+  margin: 0 auto;
+}
+
+
+
+// tomoyoページあにめーしょん
+$color-main: rgb(228, 222, 222);
+$black:black;
+
+.has-animation {
+  display: flex;
+  justify-content: space-around;
+
+  position: relative;
+  p, img {
+      opacity: 0;
+  }
+  &.animate-in {
+    p, img {
+      animation: textHidden 0.1s 1.1s forwards;
+    }
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      z-index: 10;
+    }
+    &:before {
+      background-color: $color-main;
+    }
+    &:after {
+      background-color: $black;
+      animation-delay: .5s;
+    }
+  }
+  &.animation-ltor.animate-in {
+    &:before {
+      animation: revealLtoR 1.8s ease;
+    }
+    &:after {
+      animation: revealLtoR 1s .6s ease;
+    }
+  }
+  &.animation-rtol.animate-in {
+    &:before {
+      animation: revealRtoL 1.8s ease;
+    }
+    &:after {
+      animation: revealRtoL 1s .6s ease;
+    }
+  }
+}
+
+@keyframes revealRtoL {
+  0%{
+    width: 0;
+    right: 0;
+  }
+  65%{
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    right: 100%;
+  }
+}
+
+@keyframes revealLtoR {
+  0%{
+    width: 0;
+    left: 0;
+  }
+  65%{
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+
+
+
+@keyframes textHidden {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+// けんさくぼっくすのやつ_(:3 」∠)_
+.shadow {
+  display: none;
 }
