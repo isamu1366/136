@@ -42,6 +42,15 @@ body{
   border-bottom: solid 2px gray;
   
 }
+
+.headerunder a:visited {
+  color: white;
+}
+
+.headerunder a {
+  text-decoration: none;
+}
+
 .footer {
   width: 100%;
   margin-top: 5%;
