@@ -3,6 +3,7 @@ h1{
 }
 h3{
   font-size: 15px;
+  font-weight: bold;
 }
 body{
   height: 100%;
@@ -88,10 +89,16 @@ body{
   flex-direction: column;
   text-align:center;
 }
+
+.main2 a:visited {
+  color: black;
+}
+
 .main2 li{
   text-align: left;
   margin-left: 20%;
   cursor: pointer;
+  font-family: serif;
 }
 .main a{
   text-decoration-line: none;
@@ -106,5 +113,4 @@ body{
   position: -webkit-sticky;
   position: sticky;
   top:0px;
- 
 }
